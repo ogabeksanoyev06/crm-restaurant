@@ -14,11 +14,11 @@ export default defineNuxtConfig({
 				},
 				{ property: 'og:title', content: 'Marvarid Restorani - Mazali va An’anaviy O‘zbek Taomlari' },
 				{ property: 'og:description', content: 'An’anaviy O‘zbek oshxonasi - palov, shashlik, somsa va boshqa milliy taomlar. Qulay muhit va eng yaxshi xizmat!' },
-				{ property: 'og:image', content: '/Screenshot 2025-01-30 020030.jpg' },
+				{ property: 'og:image', content: '/image.png' },
 				{ property: 'og:type', content: 'restaurant' },
 				{ name: 'twitter:title', content: 'Marvarid Restorani - Mazali va An’anaviy O‘zbek Taomlari' },
 				{ name: 'twitter:description', content: 'Palov, shashlik, lag‘mon, somsa va boshqa milliy taomlar. O‘zbek oshxonasining haqiqiy lazzati!' },
-				{ name: 'twitter:image', content: '/Screenshot 2025-01-30 020030.jpg' },
+				{ name: 'twitter:image', content: '/image.png' },
 				{ name: 'twitter:card', content: 'summary_large_image' },
 				{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
 			],
