@@ -65,8 +65,12 @@ export default {
 					4: 'hsl(var(--chart-4))',
 					5: 'hsl(var(--chart-5))'
 				}
+			},
+			boxShadow: {
+				box: 'inset 0px -1px 0px rgba(102,117,137,.3)',
+				blog: '0px 3px 20px rgba(18,28,37,.06),0px 4px 30px rgba(18,28,37,.07),inset 0px -1px 0px rgba(102,117,137,.3)'
 			}
 		}
 	},
 	plugins: [require('tailwindcss-animate')]
-};
+}

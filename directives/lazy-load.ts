@@ -29,7 +29,7 @@ export function VLazyLoad(el: HTMLElement, binding: DirectiveBinding) {
 				};
 
 				img.onerror = () => {
-					image.src = el.attributes['error-state']?.value || `/images/default.svg`; // Use default loading image if provided, otherwise, clear the src
+					image.src = el.attributes['error-state']?.value || `/favicon.svg`; // Use default loading image if provided, otherwise, clear the src
 					el.classList.remove('image-loading');
 					el.classList.add('error');
 					observer.unobserve(el);

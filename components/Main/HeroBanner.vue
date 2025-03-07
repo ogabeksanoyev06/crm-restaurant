@@ -37,7 +37,7 @@ const settings = {
 	<div class="overflow-hidden main-slider relative">
 		<Swiper ref="swiperRef" @swiper="onSwiper" v-bind="settings" :modules="[Autoplay, Pagination]" class="!rounded-lg">
 			<SwiperSlide v-for="(slide, idx) in 10" :key="idx" class="cursor-grab relative w-full z-1 md:!h-[35rem]">
-				<CommonImage src="/assets/images/image.png" class="transition-200 w-full rounded-lg h-full object-cover" />
+				<img src="/assets/images/image.png" class="transition-200 w-full rounded-lg h-full object-cover" />
 			</SwiperSlide>
 		</Swiper>
 

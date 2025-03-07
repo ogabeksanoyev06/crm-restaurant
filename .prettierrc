@@ -9,5 +9,13 @@
 	"trailingComma": "none",
 	"bracketSpacing": true,
 	"jsxBracketSameLine": false,
-	"semi": true
+	"semi": false,
+	"overrides": [
+		{
+			"files": ["**/*.css", "**/*.scss", "**/*.html"],
+			"options": {
+				"singleQuote": false
+			}
+		}
+	]
 }

@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 		}
 	},
 	css: ['@/assets/css/tailwind.css'],
-	modules: ['@pinia/nuxt', 'dayjs-nuxt', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', 'nuxt-swiper'],
+	modules: ['@pinia/nuxt', 'dayjs-nuxt', '@nuxt/image', '@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'shadcn-nuxt', 'nuxt-swiper', 'pinia-plugin-persistedstate/nuxt'],
 
 	shadcn: {
 		prefix: '',
@@ -62,4 +62,4 @@ export default defineNuxtConfig({
 	build: {
 		transpile: ['vue-toastification']
 	}
-});
+})

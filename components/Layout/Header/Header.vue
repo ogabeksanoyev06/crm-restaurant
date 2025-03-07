@@ -1,5 +1,10 @@
 <script setup>
-const open = ref(false);
+const open = ref(false)
+import { Icon } from '@iconify/vue'
+import { useCartStore } from '@/stores/cart'
+
+const cartStore = useCartStore()
+const { totalPrice } = storeToRefs(cartStore)
 </script>
 
 <template>
@@ -9,11 +14,11 @@ const open = ref(false);
 				<NuxtLink to="/" class="mr-4 md:mr-2 lg:mr-6 flex items-center lg:space-x1 xl:space-x-2 flex-shrink-0">
 					<img src="/assets/svg/logo.svg" alt="" class="w-[8rem] h-auto" />
 				</NuxtLink>
-				<nav class="flex items-center gap-4 text-sm xl:gap-6">
-					<NuxtLink to="/category" class="transition-colors hover:text-foreground/80 text-foreground">Kategoriya</NuxtLink>
-					<NuxtLink to="/branches" class="transition-colors hover:text-foreground/80 text-foreground">Filiallar</NuxtLink>
-					<NuxtLink to="/about" class="transition-colors hover:text-foreground/80 text-foreground">Biz haqimizda</NuxtLink>
-					<NuxtLink to="/contacts" class="transition-colors hover:text-foreground/80 text-foreground">Bog'lanish</NuxtLink>
+				<nav class="flex items-center text-sm gap-1">
+					<NuxtLink to="/category" class="transition-300 hover:text-foreground/80 text-foreground px-3 py-1.5 rounded hover:bg-muted"> Kategoriya</NuxtLink>
+					<NuxtLink to="/branches" class="transition-300 hover:text-foreground/80 text-foreground px-3 py-1.5 rounded hover:bg-muted">Filiallar</NuxtLink>
+					<NuxtLink to="/about" class="transition-300 hover:text-foreground/80 text-foreground px-3 py-1.5 rounded hover:bg-muted">Biz haqimizda</NuxtLink>
+					<NuxtLink to="/contacts" class="transition-300 hover:text-foreground/80 text-foreground px-3 py-1.5 rounded hover:bg-muted">Bog'lanish</NuxtLink>
 				</nav>
 			</div>
 			<Button @click="open = true" class="md:hidden mr-2" variant="ghost" size="icon">
@@ -50,7 +55,7 @@ const open = ref(false);
 									<clipPath id="clip0_5392_59026"><rect width="20" height="20" fill="white"></rect></clipPath>
 								</defs>
 							</svg>
-							<span class="leading-4">2 212 500 <span class="hidden sm:inline-flex">so'm</span></span>
+							<span class="leading-4">{{ formatPrice(totalPrice) }} <span class="hidden sm:inline-flex">so'm</span></span>
 						</Button>
 					</NuxtLink>
 					<LayoutHeaderAuthorization />
@@ -63,15 +68,10 @@ const open = ref(false);
 		<SheetContent side="left">
 			<SheetHeader>
 				<NuxtLink to="/" class="mr-4 md:mr-2 lg:mr-6 flex items-center lg:space-x1 xl:space-x-2">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-6 w-6 text-yellow-500">
-						<rect width="256" height="256" fill="none"></rect>
-						<line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></line>
-						<line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></line>
-					</svg>
-					<span class="font-bold text-yellow-500"> Marvarid </span>
+					<img src="/assets/svg/logo.svg" alt="marvarid.uz" class="w-[8rem] h-auto" />
 				</NuxtLink>
 			</SheetHeader>
-			<ScrollArea class="relative overflow-hidden my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+			<ScrollArea class="relative overflow-hidden my-4 h-[calc(100vh-8rem)] pb-10">
 				<nav class="flex flex-col gap-4 text-sm xl:gap-6">
 					<NuxtLink to="/" class="transition-colors hover:text-foreground/80 text-foreground">Menyu</NuxtLink>
 					<NuxtLink to="/" class="transition-colors hover:text-foreground/80 text-foreground">Filiallar</NuxtLink>
@@ -82,3 +82,9 @@ const open = ref(false);
 		</SheetContent>
 	</Sheet>
 </template>
+
+<style scoped>
+nav .router-link-exact-active {
+	background-color: hsl(var(--muted));
+}
+</style>

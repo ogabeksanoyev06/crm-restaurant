@@ -52,7 +52,7 @@ const settings = {
 						<NuxtLink to="/" class="group flex md:flex-col-reverse flex-col items-center gap-4 rounded-xl shadow p-3 md:justify-between">
 							<p class="text-center text-xs font-bold first-letter:uppercase md:text-sm">{{ item.title.uz }}</p>
 							<div class="category-card-icon h-[80px] w-[80px] overflow-hidden p-0 md:mb-4 md:h-[70px] md:w-[70px] md:p-2 lg:h-[150px] lg:w-[150px]">
-								<CommonImage src="https://eda.yandex/images/3559865/eff1b7d510d51f32dd35ad0d412670b9-216x188.jpeg" class="h-full w-full object-contain transition-transform duration-500 ease-in-out will-change-transform group-hover:scale-75" />
+								<CommonImage src="" :imageClass="'!object-contain'" class="h-full w-full transition-transform duration-500 ease-in-out will-change-transform group-hover:scale-75" />
 							</div>
 						</NuxtLink>
 					</div>
