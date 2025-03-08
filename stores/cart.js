@@ -1,3 +1,5 @@
+import { createPersistedState } from 'pinia-plugin-persistedstate'
+
 export const useCartStore = defineStore(
 	'cart',
 	() => {
@@ -58,7 +60,7 @@ export const useCartStore = defineStore(
 	},
 	{
 		persist: {
-			key: 'cart'
+			enabled: true
 		}
 	}
 )
