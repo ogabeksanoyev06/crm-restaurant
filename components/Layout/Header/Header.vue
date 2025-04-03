@@ -8,7 +8,7 @@ const { totalPrice } = storeToRefs(cartStore)
 </script>
 
 <template>
-	<header class="border-grid sticky top-0 z-50 w-full lg:border-b border-dashed lg:-mb-px bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+	<header class="top-0 z-50 w-full lg:border-b border-dashed lg:-mb-px bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 		<div class="container flex h-14 items-center">
 			<div class="mr-4 md:mr-1 hidden md:flex">
 				<NuxtLink to="/" class="mr-4 md:mr-2 lg:mr-6 flex items-center lg:space-x1 xl:space-x-2 flex-shrink-0">

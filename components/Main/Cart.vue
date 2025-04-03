@@ -9,7 +9,7 @@ const { deleteFromCart, clearCart } = cartStore
 
 <template>
 	<div class="hidden xl:block">
-		<div class="sticky top-16 h-[calc(100vh-4rem)]">
+		<div class="sticky top-14 h-[calc(100vh-56px)]">
 			<div class="h-full border border-dashed rounded-t-xl overflow-hidden">
 				<div class="flex flex-col h-full">
 					<div class="flex-center-between p-4">
@@ -37,10 +37,12 @@ const { deleteFromCart, clearCart } = cartStore
 						</div>
 					</div>
 					<div class="p-4 grid gap-2">
-						<Button class="w-full justify-between h-12 rounded-lg">
-							<span>Umumiy narx</span>
-							<span class="text-lg font-semibold">{{ formatPrice(cartStore.totalPrice) }} so'm</span>
-						</Button>
+						<NuxtLink to="/cart">
+							<Button class="w-full justify-between h-12 rounded-lg">
+								<span>Savatga O'tish</span>
+								<span class="text-lg font-semibold">{{ formatPrice(cartStore.totalPrice) }} so'm</span>
+							</Button>
+						</NuxtLink>
 					</div>
 				</div>
 			</div>

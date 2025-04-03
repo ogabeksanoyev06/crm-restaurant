@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-	<footer class="border-t">
+	<footer class="border-t border-dashed">
 		<div class="container py-4 flex-center-between">
 			<p class="text-sm">© 2025. Marvarid. Barcha huquqlar himoyalangan.</p>
 			<nav class="flex items-center gap-4">

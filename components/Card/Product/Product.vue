@@ -95,7 +95,7 @@ const cartQuantity = computed(() => {
 				<NumberField v-else :min="1" v-model="cartQuantity" @update:model-value="updateQuantity($event)">
 					<NumberFieldContent>
 						<NumberFieldDecrement />
-						<NumberFieldInput class="rounded-xl" />
+						<NumberFieldInput class="rounded-xl" readonly />
 						<NumberFieldIncrement />
 					</NumberFieldContent>
 				</NumberField>
